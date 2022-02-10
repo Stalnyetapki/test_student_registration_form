@@ -21,7 +21,6 @@ public class StudentRegistrationFormTest {
 
     @Test
     void successFillTest() {
-        File picture = new File("src/test/java/tests/kek.png");
 
         open("/automation-practice-form");
         $(".main-header").shouldHave(text("Practice Form"));
