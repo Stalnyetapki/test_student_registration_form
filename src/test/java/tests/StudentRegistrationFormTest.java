@@ -36,7 +36,7 @@ public class StudentRegistrationFormTest {
         $(".react-datepicker__day--025").click();
         $("#subjectsInput").setValue("English").pressEnter();
         $(byText("Sports")).click();
-        $("#uploadPicture").uploadFile(picture);
+        $("#uploadPicture").uploadFromClasspath("kek.png");
         $("#currentAddress").setValue("Praha");
         $("#react-select-3-input").setValue("NCR").pressEnter();
         $("#react-select-4-input").setValue("Delhi").pressEnter();
