@@ -117,12 +117,11 @@ public class RegistrationPage {
         submitButton.click();
     }
 
-    public RegistrationPage setBirthDate (String day, String month, String year) {
+    public RegistrationPage setBirthDate(String day, String month, String year) {
         dateOfBirthInput.click();
         calendarComponent.setDate(day, month, year);
 
         return this;
-
     }
 
     public RegistrationPage checkForm(String fieldName, String value) {

@@ -1,4 +1,5 @@
 package tests;
+
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -55,7 +56,6 @@ public class StudentRegistrationFormWithPageObjectsTests {
                 .setCity(city)
                 .sendForm();
 
-
         //compare input data with output data
         registrationPage
                 .checkPopupAppearance()
@@ -69,6 +69,5 @@ public class StudentRegistrationFormWithPageObjectsTests {
                 .checkForm("Picture", nameOfPicture)
                 .checkForm("Address", address)
                 .checkForm("State and City", state + " " + city);
-
     }
 }
