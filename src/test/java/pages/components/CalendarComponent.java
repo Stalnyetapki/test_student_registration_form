@@ -8,7 +8,7 @@ public class CalendarComponent {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(month);
         $(".react-datepicker__year-select").selectOption(year);
-        $("[aria-label$='" + month + " " + day + "th, " + year + "']").click();
+        $(".react-datepicker__day--0" + day + ":not(.react-datepicker__day--outside-month)").click();
 
     }
 }
