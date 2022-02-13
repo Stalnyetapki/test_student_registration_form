@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class StudentRegistrationFormWithPageObjectsTests {
+public class StudentRegistrationFormWithPageObjectsTests extends TestBase{
 
     RegistrationPage registrationPage = new RegistrationPage();
     String firstName = "Karl";
@@ -29,12 +29,6 @@ public class StudentRegistrationFormWithPageObjectsTests {
     String address = "Praha";
     String state = "NCR";
     String city = "Delhi";
-
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
-    }
 
     @Test
     void successFillTest() {
