@@ -48,7 +48,7 @@ public class StudentRegistrationFormWithPageObjectsTests extends TestBase {
         });
 
         //compare input data with output data
-        step("compare input data with output data", () -> {
+        step("Compare input data with output data", () -> {
             registrationPage
                     .checkPopupAppearance()
                     .checkForm("Student Name", firstName + " " + lastName)
