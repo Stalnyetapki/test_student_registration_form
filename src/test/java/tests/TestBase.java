@@ -13,7 +13,6 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
 
-
     @BeforeAll
     @Step("Setting configuration")
     static void BeforeAll() {
@@ -22,12 +21,12 @@ public class TestBase {
 
         String userLogin = System.getProperty("userLogin", UserCredential.userLogin);
         String userPassword = System.getProperty("userPassword", UserCredential.userPassword);
-        String remoteBrowser = System.getProperty("remoteBrowser", "selenoid.autotests.cloud/wd/hub");
+
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.remote = "https://" + System.getProperty(userLogin) + ":" + System.getProperty(userPassword) + "@"
-                + System.getProperty(remoteBrowser);
+        Configuration.remote = "https://" + userLogin + ":" + userPassword + "@"
+                + System.getProperty("remoteBrowser", "selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
