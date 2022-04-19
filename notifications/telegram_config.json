@@ -3,7 +3,7 @@
     "project": "Registration form test",
     "environment": "some env",
     "comment": "some comment",
-    "reportLink": "qa.guru",
+    "reportLink": "",
     "language": "en",
     "messenger": "telegram",
     "allureFolder": "allure-report/",
