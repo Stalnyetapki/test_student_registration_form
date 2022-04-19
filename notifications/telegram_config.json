@@ -1,0 +1,17 @@
+{
+  "base": {
+    "project": "Registration form test",
+    "environment": "some env",
+    "comment": "some comment",
+    "reportLink": "qa.guru",
+    "language": "en",
+    "messenger": "telegram",
+    "allureFolder": "build/allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "5335765530:AAHRR_SzYXR7nvJ7kNpVBvCoIrdVyqvWqAU",
+    "chat": "-1001565438608",
+    "replyTo": ""
+  }
+}

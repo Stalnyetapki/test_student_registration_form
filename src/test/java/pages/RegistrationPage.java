@@ -131,6 +131,7 @@ public class RegistrationPage {
 
     @Step("Send Registration Form")
     public void sendForm() {
+        submitButton.scrollTo();
         submitButton.click();
     }
 
@@ -150,3 +151,10 @@ public class RegistrationPage {
     }
 
 }
+
+/*
+curl -X POST \
+     -H 'Content-Type: application/json' \
+     -d '{"chat_id": "298571404", "text": "This is a test from curl", "disable_notification": true}' \
+     https://api.telegram.org/bot5335765530:AAHRR_SzYXR7nvJ7kNpVBvCoIrdVyqvWqAU/sendMessage
+ */
