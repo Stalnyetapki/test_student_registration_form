@@ -8,8 +8,7 @@ import pages.components.CalendarComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPage {
 
@@ -40,6 +39,8 @@ public class RegistrationPage {
     @Step("Open \"/automation-practice-form\" page")
     public RegistrationPage openPage() {
         open("/automation-practice-form");
+        executeJavaScript("$('footer').remove()");
+        executeJavaScript("$('#fixedban').remove()");
         headerTitle.shouldHave(text("Practice Form"));
 
         return this;
