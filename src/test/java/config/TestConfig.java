@@ -9,16 +9,16 @@ import org.aeonbits.owner.Config;
 public interface TestConfig extends Config {
 
     @Key("baseUrl")
-    @DefaultValue("https://demoqa.com")
     String getBaseurl();
 
     @Key("browserSize")
-    @DefaultValue("1920x1080")
     String getBrowserSize();
 
     @Key("browserName")
-    @DefaultValue("chrome")
     String getBrowserName();
+
+    @Key("browserVersion")
+    String getBrowserVersion();
 
     @Key("remoteUrl")
     String getRemoteUrl();
