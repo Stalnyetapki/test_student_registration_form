@@ -2,6 +2,10 @@ package config;
 
 import org.aeonbits.owner.Config;
 
+
+@Config.Sources({
+        "classpath:${env}.properties"
+})
 public interface TestConfig extends Config {
 
     @Key("baseUrl")
@@ -13,9 +17,13 @@ public interface TestConfig extends Config {
     String getBrowserSize();
 
     @Key("browserName")
-    @DefaultValue("Chrome")
+    @DefaultValue("chrome")
     String getBrowserName();
 
     @Key("remoteUrl")
-    String getRemoteConnection();
+    String getRemoteUrl();
+
+    @Key("isRemote")
+    @DefaultValue("false")
+    boolean isRemote();
 }
