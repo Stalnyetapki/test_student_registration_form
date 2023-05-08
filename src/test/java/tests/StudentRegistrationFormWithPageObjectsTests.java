@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
@@ -26,6 +27,7 @@ public class StudentRegistrationFormWithPageObjectsTests extends TestBase {
 
 
     @Test
+    @DisplayName("Verify that submitting a form and receiving a response works")
     void successFillTest() {
 
         //open form and input data

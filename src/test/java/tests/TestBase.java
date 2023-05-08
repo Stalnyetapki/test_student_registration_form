@@ -20,8 +20,6 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
 
-
-
     @BeforeAll
     @Step("Setting configuration")
     static void BeforeAll() {
